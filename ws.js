@@ -31,7 +31,7 @@ const multiaddr_to_ws = (addr) => {
 	let parsed = addr.match(/^\/(ip4|ip6|dns4|dns6)\/(.*?)\/tcp\/(.*?)\/(ws|wss|x-parity-ws\/(.*)|x-parity-wss\/(.*))$/);
 	let proto = 'wss';
 	if (parsed[4] == 'ws' || parsed[4] == 'x-parity-ws') {
-		proto = 'ws';
+		proto = 'wss';
 	}
 	let url = decodeURIComponent(parsed[5] || parsed[6] || '');
 	if (parsed != null) {
