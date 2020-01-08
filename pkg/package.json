@@ -7,8 +7,10 @@
   "version": "0.7.14",
   "files": [
     "polkadot_cli_bg.wasm",
-    "polkadot_cli.js"
+    "polkadot_cli.js",
+    "polkadot_cli.d.ts"
   ],
   "module": "polkadot_cli.js",
+  "types": "polkadot_cli.d.ts",
   "sideEffects": "false"
 }
