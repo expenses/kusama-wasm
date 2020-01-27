@@ -180,11 +180,7 @@ function debugString(val) {
     return className;
 }
 function __wbg_adapter_26(arg0, arg1) {
-    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hd58c9ec31dab02b5(arg0, arg1);
-}
-
-function __wbg_adapter_29(arg0, arg1) {
-    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__he8dd691d17a63682(arg0, arg1);
+    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h151067034a0b989e(arg0, arg1);
 }
 
 let stack_pointer = 32;
@@ -194,7 +190,7 @@ function addBorrowedObject(obj) {
     heap[--stack_pointer] = obj;
     return stack_pointer;
 }
-function __wbg_adapter_32(arg0, arg1, arg2) {
+function __wbg_adapter_29(arg0, arg1, arg2) {
     try {
         wasm._dyn_core__ops__function__FnMut___A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hb48075bcf3474328(arg0, arg1, addBorrowedObject(arg2));
     } finally {
@@ -202,23 +198,30 @@ function __wbg_adapter_32(arg0, arg1, arg2) {
     }
 }
 
-function __wbg_adapter_35(arg0, arg1) {
-    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h151067034a0b989e(arg0, arg1);
+function __wbg_adapter_32(arg0, arg1, arg2) {
+    wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hfff4a1cdfa58a0f1(arg0, arg1, addHeapObject(arg2));
 }
 
-function __wbg_adapter_38(arg0, arg1, arg2) {
-    wasm._dyn_core__ops__function__FnMut__A____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hfff4a1cdfa58a0f1(arg0, arg1, addHeapObject(arg2));
+function __wbg_adapter_35(arg0, arg1) {
+    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__he8dd691d17a63682(arg0, arg1);
+}
+
+function __wbg_adapter_38(arg0, arg1) {
+    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hd58c9ec31dab02b5(arg0, arg1);
 }
 
 /**
 * Starts the client.
 *
 * You must pass a libp2p transport that supports .
+* @param {string} chain_spec
 * @param {any} wasm_ext
 * @returns {any}
 */
-export function start_client(wasm_ext) {
-    var ret = wasm.start_client(addHeapObject(wasm_ext));
+export function start_client(chain_spec, wasm_ext) {
+    var ptr0 = passStringToWasm0(chain_spec, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+    var len0 = WASM_VECTOR_LEN;
+    var ret = wasm.start_client(ptr0, len0, addHeapObject(wasm_ext));
     return takeObject(ret);
 }
 
@@ -936,17 +939,17 @@ function init(module) {
         var ret = wasm.memory;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper13346 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper501 = function(arg0, arg1, arg2) {
 
         const state = { a: arg0, b: arg1, cnt: 1 };
-        const real = () => {
+        const real = (arg0) => {
             state.cnt++;
             const a = state.a;
             state.a = 0;
             try {
-                return __wbg_adapter_29(a, state.b, );
+                return __wbg_adapter_29(a, state.b, arg0);
             } finally {
-                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(5941)(a, state.b);
+                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(154)(a, state.b);
                 else state.a = a;
             }
         }
@@ -955,7 +958,7 @@ function init(module) {
         var ret = real;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper13625 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper502 = function(arg0, arg1, arg2) {
 
         const state = { a: arg0, b: arg1, cnt: 1 };
         const real = () => {
@@ -965,7 +968,7 @@ function init(module) {
             try {
                 return __wbg_adapter_26(a, state.b, );
             } finally {
-                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(5996)(a, state.b);
+                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(154)(a, state.b);
                 else state.a = a;
             }
         }
@@ -974,7 +977,7 @@ function init(module) {
         var ret = real;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper505 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper13708 = function(arg0, arg1, arg2) {
 
         const state = { a: arg0, b: arg1, cnt: 1 };
         const real = () => {
@@ -982,9 +985,9 @@ function init(module) {
             const a = state.a;
             state.a = 0;
             try {
-                return __wbg_adapter_35(a, state.b, );
+                return __wbg_adapter_38(a, state.b, );
             } finally {
-                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(153)(a, state.b);
+                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(6013)(a, state.b);
                 else state.a = a;
             }
         }
@@ -993,7 +996,7 @@ function init(module) {
         var ret = real;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper504 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper10349 = function(arg0, arg1, arg2) {
 
         const state = { a: arg0, b: arg1, cnt: 1 };
         const real = (arg0) => {
@@ -1003,7 +1006,7 @@ function init(module) {
             try {
                 return __wbg_adapter_32(a, state.b, arg0);
             } finally {
-                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(153)(a, state.b);
+                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(3886)(a, state.b);
                 else state.a = a;
             }
         }
@@ -1012,17 +1015,17 @@ function init(module) {
         var ret = real;
         return addHeapObject(ret);
     };
-    imports.wbg.__wbindgen_closure_wrapper10279 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper13416 = function(arg0, arg1, arg2) {
 
         const state = { a: arg0, b: arg1, cnt: 1 };
-        const real = (arg0) => {
+        const real = () => {
             state.cnt++;
             const a = state.a;
             state.a = 0;
             try {
-                return __wbg_adapter_38(a, state.b, arg0);
+                return __wbg_adapter_35(a, state.b, );
             } finally {
-                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(3869)(a, state.b);
+                if (--state.cnt === 0) wasm.__wbindgen_export_2.get(5958)(a, state.b);
                 else state.a = a;
             }
         }
