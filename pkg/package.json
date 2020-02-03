@@ -4,7 +4,7 @@
     "Parity Technologies <admin@parity.io>"
   ],
   "description": "Polkadot node implementation in Rust.",
-  "version": "0.7.19",
+  "version": "0.7.20",
   "files": [
     "polkadot_cli_bg.wasm",
     "polkadot_cli.js",
